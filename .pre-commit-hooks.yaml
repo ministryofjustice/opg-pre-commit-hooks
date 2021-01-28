@@ -1,0 +1,9 @@
+- id: "check-for-raw-in-templates"
+  name: "Check Instances of 'raw' in a certain folder"
+  entry: check-for-raw-in-templates.sh
+  types: [text]
+  exclude: ".yaml$|.yml$"
+  language: "script"
+  description: "This hook checks for instances of raw in a folder you choose"
+  args: [--d]
+  
