@@ -10,7 +10,7 @@ c) ALLOWED_COUNT=${OPTARG};;
 esac
 done
 
-if [ `grep -r 'raw' ${DIRECTORY}/* | grep -v 'assetSource' | wc -l` -gt ${ALLOWED_COUNT} ]
+if [ `grep -r '|.*raw' ${DIRECTORY}/* | wc -l` -gt ${ALLOWED_COUNT} ]
 then
   echo "Instances of raw in ${DIRECTORY}. Please remove"
   exit 1
